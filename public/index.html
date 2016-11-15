@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Material Starter</title>
-
+  <title>Waitstaff Calc</title>
+  
   <base href="/" />
 
   <meta charset="utf-8">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css"/>
+  
 
   <style>
     h1,h2,h3,h4,h5,h6,p,span  {
@@ -42,6 +43,7 @@
         padding: 0 12px;
     }
 </style>
+<link rel="stylesheet" href="/css/output.css" >
 </head>
 
 <body ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
@@ -122,7 +124,7 @@
 <script src="/scripts/angular-animate/angular-animate.min.js"></script>
 <script src="/scripts/angular-aria/angular-aria.min.js"></script>
 <script src="/scripts/angular-material/angular-material.min.js"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
 <script type="text/javascript" src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 <script src="modules/cards/controllers/cardsCtrl.js"></script>
@@ -133,7 +135,8 @@
 
 <script src="modules/tabs/controllers/tabsCtrl.js"></script>
 <script src="modules/tabs/services/tabsService.js"></script>
-
+<script src="modules/calc/controllers/calcCtrl.js"></script>
+<script src="modules/calc/services/calcService.js"></script>
 <script src="app.controller.js"></script>
 
 <script src="app.js"></script>

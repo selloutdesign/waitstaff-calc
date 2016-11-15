@@ -39,6 +39,15 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             params: {
                 title: "Tabs"
             }
+        })
+        .state('calc', {
+            url: '/calc',
+            templateUrl: '/modules/calc/views/calc.html',
+            controller: 'calcCtrl',
+            controllerAs: 'Calc',
+            params: {
+                title: "Waitstaff Calc"
+            }
         });
 
     $locationProvider.html5Mode(true);

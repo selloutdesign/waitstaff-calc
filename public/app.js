@@ -3,13 +3,16 @@ var materialApp = angular
     'materialApp.routes',
     'ui.router',
     'ngMaterial',
+    'ngMessages',
     'appCtrl',
     'cardsCtrl',
     'cardsService',
     'listCtrl',
     'listService',
     'tabsCtrl',
-    'tabsService'
+    'tabsService',
+    'calcCtrl',
+    'calcService'
 ]).config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('blue')
