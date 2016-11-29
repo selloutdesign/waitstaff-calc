@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="/css/output.css" >
 </head>
 
-<body ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
+<body  ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
 
     <md-sidenav class="md-sidenav-left md-whiteframe-4dp ng-cloak" md-component-id="left">
 
@@ -115,8 +115,10 @@
         </div>
 
     </md-toolbar>
-
-    <div ui-view></div>
+    <div class="animate-view-container">
+        <div ui-view class="animate-view"></div>
+    </div>
+    
 
 </div>
 

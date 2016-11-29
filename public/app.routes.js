@@ -1,4 +1,21 @@
 var router = angular.module('materialApp.routes', ['ui.router']);
+router.run(function($rootScope, $location, $timeout) {
+    $rootScope.$on('$stateChangeError', function(evt, toState, toParams, fromState, fromParams) {
+        console.log("$stateChangeError " + fromState.name + JSON.stringify(fromParams) + " -> " + toState.name + JSON.stringify(toParams));
+        $location.path("/error");
+    });
+    $rootScope.$on('$stateChangeStart', function(evt, toState, toParams, fromState, fromParams) {
+        console.log("$stateChangeStart " + fromState.name + JSON.stringify(fromParams) + " -> " + toState.name + JSON.stringify(toParams));
+        $rootScope.isLoading = true;
+        console.log($rootScope.isLoading);
+    });
+    $rootScope.$on('$stateChangeSuccess', function(evt, toState, toParams, fromState, fromParams) {
+      console.log("$stateChangeSuccess " + fromState.name + JSON.stringify(fromParams) + " -> " + toState.name + JSON.stringify(toParams));
+      $timeout(function() {
+        $rootScope.isLoading = false;
+      }, 1000);
+    });
+});
 router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $urlRouterProvider.otherwise('/');
