@@ -1,0 +1,65 @@
+
+
+<div class="padding-inner">
+
+  <div layout="row" layout-wrap >
+    <div flex="60" layout="column" layout-padding>
+      <md-card>
+        <md-card-header>
+          <md-card-header-text>
+            <h2>Enter Meal Details</h2>
+            <md-divider></md-divider>
+          </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+        <form name="mealDetails" ng-submit="Meals.submit(mealDetails)">
+          <md-input-container class="md-block">
+            <label>Base Meal Price</label>
+            <input ng-model="Meals.basePrice" type="number" name="basePrice" required >
+
+          </md-input-container >
+          <md-input-container class="md-block">
+            <label>Tax Rate %</label>
+            <input ng-model="Meals.taxRate" name="number" >
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Tip Percentage</label>
+            <input ng-model="Meals.tipPercent" type="number" name="tipPercent"  >
+          </md-input-container>
+        </md-card-content>
+        <md-card-footer>
+          <span flex> </span>
+          <md-button ng-click="Meals.cancel()">Cancel </md-button>
+          <md-button type="submit" md-autofocus class="md-raised md-primary"> Submit </md-button>
+        </md-card-footer>
+        </form>
+      </md-card>
+    </div>
+
+    <div flex layout="column" layout-padding>
+            <md-card>
+              <md-card-header>
+                <md-card-header-text>
+                  <h2>Customer Charges</h2>
+                  <md-divider></md-divider>
+                </md-card-header-text>
+              </md-card-header>
+              <md-card-content>
+                <div class="margin-top-20">
+                  <label for="subtotal">Subtotal: </label>
+                  <p class="inline" name="subtotal"> {{Meals.subTotal | currency}} </p>
+                </div >
+                <div class="margin-top-20">
+                  <label for="tip">Tip: </label>
+                  <p class="inline" name="tip"> {{Meals.tip | currency}} </p>
+                </div >
+                <div class="margin-top-20">
+                  <label for="subtotal">Total: </label>
+                  <p class="inline" name="subtotal"> {{Meals.total | currency}} </p>
+                </div >
+              </md-card-content>
+            </md-card>
+    </div>
+  </div>
+
+</div>

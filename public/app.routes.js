@@ -10,25 +10,25 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/',
             templateUrl: 'home.html',
             params: {
-                title: "Material Starter"
+                title: "Waitstaff Calculator"
             }
         })
-        .state('cards', {
-            url: '/cards',
-            templateUrl: '/modules/cards/views/cards.html',
-            controller: 'cardsCtrl',
-            controllerAs: 'Cards',
+        .state('new-meal', {
+            url: '/new-meal',
+            templateUrl: '/modules/new-meal/views/new-meals.html',
+            controller: 'newMealCtrl',
+            controllerAs: 'Meals',
             params: {
-                title: "Cards"
+                title: "New Meal"
             }
         })
-        .state('list', {
-            url: '/list',
-            templateUrl: '/modules/list/views/list.html',
-            controller: 'listCtrl',
-            controllerAs: 'List',
+        .state('my-earnings', {
+            url: '/my-earnings',
+            templateUrl: '/modules/my-earnings/views/my-earnings.html',
+            controller: 'myEarningsCtrl',
+            controllerAs: 'Earnings',
             params: {
-                title: "List"
+                title: "Earnings"
             }
         })
         .state('tabs', {
@@ -48,6 +48,10 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             params: {
                 title: "Waitstaff Calc"
             }
+        })
+        .state('otherwise', {
+            url: "*path",
+            templateUrl: "home.html"
         });
 
     $locationProvider.html5Mode(true);

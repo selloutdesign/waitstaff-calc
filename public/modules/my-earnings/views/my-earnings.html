@@ -1,0 +1,36 @@
+
+
+<div class="padding-inner">
+
+  <div layout="row" layout-wrap >
+    
+
+    <div flex="50" layout="column" layout-padding>
+
+            <md-card>
+              <md-card-header>
+                <md-card-header-text>
+                  <h2>My Earnings Info</h2>
+                  <md-divider></md-divider>
+                </md-card-header-text>
+              </md-card-header>
+              <md-card-content>
+                <div class="margin-top-20">
+                  <label for="topTotal">Tip Total: </label>
+                  <p class="inline" name="topTotal"> {{Earnings.tipTotal | currency}} </p>
+                </div >
+                <div class="margin-top-20">
+                  <label for="mealcount">Meal Count: </label>
+                  <p class="inline" name="mealcount"> {{Earnings.mealCount}} </p>
+                </div >
+                <div class="margin-top-20">
+                  <label for="avetip">Average Tip Per Meal: </label>
+                  <p class="inline" name="avetip"> {{Earnings.aveTip | currency}} </p>
+                </div >
+              </md-card-content>
+            </md-card>
+            <md-button ng-click="Earnings.reset()" class="md-raised md-primary">Reset</md-button>
+    </div>
+  </div>
+
+</div>
